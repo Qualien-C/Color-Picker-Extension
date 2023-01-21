@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Boogaloo&family=Open+Sans:wght@300;400;500;600;700;800&family=Poppins:wght@200;400;500;600&display=swap');
+
+:root {
+  /*! Green theme */
+  /* --main-color: #629460;
+  --main-color-hover: #598656;
+  --background-color: #C9F2C7; */
+
+  /*! Pink theme */
+  /* --main-color: #de76b1;
+  --main-color-hover: #db57a2;
+  --background-color: #fbd0e6; */
+
+  /*! Yellow theme */
+  /* --main-color: #e5d269;
+  --main-color-hover: #e2c939;
+  --background-color: #FCF5C7; */
+
+  /*! Purple theme */
+  --main-color: #7163ad;
+  --main-color-hover: #625b8a;
+  --background-color: #9792E3;
+
+  /*! Blue theme */
+  /* --main-color: #3db6ea;
+  --main-color-hover: #28afe9;
+  --background-color: #afe2ff; */
+
+
+  --font-color: #ffffff;
+}
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  /* border: 1px solid red; */
+}
+
+.container {
+  width: 360px
+}
+
+.container :where(.picker, header, .all-colors, .color) {
+  display: flex;
+  align-items: center;
+  user-select: none;
+}
+
+.container .picker {
+  padding: 30px 0;
+  justify-content: center;
+  background: var(--background-color);
+}
+
+.picker #color-picker {
+  outline: none;
+  border: none;
+  background: var(--main-color);
+  color: var(--font-color);
+  padding: 10px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: 0.2s;
+}
+
+.picker #color-picker:hover {
+  background-color: var(--main-color-hover);
+}
+
+.picked-colors {
+  margin: 10px 15px;
+}
+
+.picked-colors.hide {
+  display: none;
+}
+
+.picked-colors header {
+  justify-content: space-between;
+}
+
+.picked-colors header .title {
+  font-size: 1rem;
+}
+
+.picked-colors .clear-all {
+  position: relative;
+  color: var(--main-color);
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.picked-colors .clear-all::after {
+  content: "";
+  position: absolute;
+  background-color: var(--main-color);
+  height: 3px;
+  width: 0;
+  left: 0;
+  bottom: -1px;
+  transition: 0.2s;
+}
+
+.picked-colors .clear-all:hover::after {
+  width: 100%;
+}
+
+.all-colors {
+  margin: 10px 0;
+  flex-wrap: wrap;
+  width: 105%;
+}
+
+.all-colors:first-child {
+  width: 100px;
+}
+
+.all-colors .color {
+  cursor: pointer;
+  margin-bottom: 5px;
+  width: calc(100% / 3);
+  padding: 5px;
+  /* user-select: none; */
+}
+
+.all-colors .color .rect {
+  display: block;
+  height: 22px;
+  width: 22px;
+  border-radius: 5px;
+  margin: 0 8px 0 0;
+}
+
+.all-colors .color .value {
+  font-size: 0.96rem;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.all-colors li {
+  transition: 0.2s;
+  border-radius: 5px;
+}
+
+.all-colors li:hover {
+  background: #eaeaea;
+}

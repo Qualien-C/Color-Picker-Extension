@@ -1,0 +1,16 @@
+{
+  "manifest_version": 3,
+  "name": "Color Picker",
+  "description": "Ever wondered, 'what's this color?' while visiting any website? Worry no more!! Our Color Picker app is designed to help you know the 'HEX' code of any color from any website in just 'TWO CLICKS'! Copy the codes, Clear all the previously selected colors, your call to it!",
+  "version": "1.0.0",
+  "icons": {
+    "16": "extension-icons/icon16.png",
+    "32": "extension-icons/icon32.png",
+    "48": "extension-icons/icon48.png",
+    "128": "extension-icons/icon128.png"
+  },
+  "action": {
+    "default_popup": "index.html"
+  }
+
+}
