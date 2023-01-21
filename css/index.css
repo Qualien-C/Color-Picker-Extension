@@ -2,34 +2,34 @@
 
 :root {
   /*! Green theme */
-  --main-color-g: #629460;
-  --main-color-hover-g: #598656;
-  --background-color-g: #C9F2C7;
-  --color-forspan-g: #1dd1a1;
+  /* --main-color: #629460;
+  --main-color-hover: #598656;
+  --background-color: #C9F2C7; */
 
   /*! Pink theme */
-  --main-color-p: #de76b1;
-  --main-color-hover-p: #db57a2;
-  --background-color-p: #fbd0e6;
+  /* --main-color: #de76b1;
+  --main-color-hover: #db57a2;
+  --background-color: #fbd0e6; */
 
   /*! Yellow theme */
-  --main-color-y: #e5d269;
-  --main-color-hover-y: #e2c939;
-  --background-color-y: #FCF5C7;
+  /* --main-color: #e5d269;
+  --main-color-hover: #e2c939;
+  --background-color: #FCF5C7; */
 
   /*! Purple theme */
-  --main-color-pr: #7163ad;
-  --main-color-hover-pr: #625b8a;
-  --background-color-pr: #9792E3;
+  --main-color: #7163ad;
+  --main-color-hover: #625b8a;
+  --background-color: #9792E3;
 
   /*! Blue theme */
-  --main-color-b: #3db6ea;
-  --main-color-hover-b: #28afe9;
-  --background-color-b: #afe2ff;
+  /* --main-color: #3db6ea;
+  --main-color-hover: #28afe9;
+  --background-color: #afe2ff; */
 
 
   --font-color: #ffffff;
 }
+
 
 * {
   margin: 0;
@@ -52,15 +52,13 @@
 .container .picker {
   padding: 30px 0;
   justify-content: center;
-  background: var(--background-color-b);
-  height: 105px;
+  background: var(--background-color);
 }
 
 .picker #color-picker {
-  position: absolute;
   outline: none;
   border: none;
-  background: var(--main-color-b);
+  background: var(--main-color);
   color: var(--font-color);
   padding: 10px 20px;
   font-size: 1rem;
@@ -69,57 +67,9 @@
   transition: 0.2s;
 }
 
-.changeBgColor {
-  position: relative;
-  /* right: -107px; */
-  right: -165px;
-  width: 30px;
-  height: 235%;
-  background-color: #303030;
-  z-index: 100;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  border-left: 2px dashed var(--font-color);
+.picker #color-picker:hover {
+  background-color: var(--main-color-hover);
 }
-
-.changeBgColor span {
-  position: relative;
-  width: 15px;
-  height: 15px;
-  margin: 2.5px 0;
-  border-radius: 50%;
-  cursor: pointer;
-}
-
-.changeBgColor span.active {
-  border: 2px solid var(--font-color);
-}
-
-.changeBgColor #greenTh {
-  background: var(--color-forspan-g);
-}
-
-.changeBgColor #pinkTh {
-  background: var(--main-color-p);
-}
-
-.changeBgColor #yellowTh {
-  background: var(--main-color-y);
-}
-
-.changeBgColor #purpleTh {
-  background: var(--main-color-pr);
-}
-
-.changeBgColor #blueTh {
-  background: var(--main-color-b);
-}
-
-/* .picker #color-picker:hover {
-  background-color: var(--main-color-hover-b);
-} */
 
 .picked-colors {
   margin: 10px 15px;
@@ -139,7 +89,7 @@
 
 .picked-colors .clear-all {
   position: relative;
-  color: var(--main-color-b);
+  color: var(--main-color);
   cursor: pointer;
   font-size: 0.9rem;
 }
@@ -147,7 +97,7 @@
 .picked-colors .clear-all::after {
   content: "";
   position: absolute;
-  background-color: var(--main-color-b);
+  background-color: var(--main-color);
   height: 3px;
   width: 0;
   left: 0;
